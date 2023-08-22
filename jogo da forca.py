@@ -5,8 +5,6 @@ espacos = []
 continuar = True
 vida = 6
 
-#FUNCOES
-
 def Limpa(): # DEF PARA LIMPAR O CONSOLE NA P/ ESCONDER A VARIAVEL{BIBLIOTECA OS}
      if os.name == 'nt': 
         _ = os.system('cls')
@@ -63,10 +61,9 @@ def Desenho(quant_vida, palavra_real):
         print("|       ")
         print(f"\nVoce perdeu!!\nA palavra era {palavra_real}")
         return False
-        
- #---------------
- 
- #Comeco do pre jogo/Pegando informações
+    
+
+#Comeco do pre jogo/Pegando informações
 print("ESSE É O JOGO FORCA")
 print("\nPeça para um seu amigo escrever a palavra para ser adivinhada")
 
@@ -82,19 +79,14 @@ for i in range(quantidade_caracter):
     espacos.append(espaco)
 
 Limpa() 
-#-------------
 
 #Começo do jogo/Laço que o jogo esta rodando 
-
 continuar = True
-# vezes = 0
 
 while continuar:
     vezes = 0
     print("Escreva sua letra ")
     letra = (input())
-
-
 
     for posicao in range(len(caracters)):
         if caracters[posicao] == letra:
